@@ -214,7 +214,7 @@ a {/*Hyperlinks manipulation   */
     padding-bottom: 10%; /* will set space for text below   */
 }
 .CardBody { /* Holds the front and back elements */
-    background-image: url("../images/Old_paper7.jpg");
+    background-image: url("../images/old_paper7.jpg");
     position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
     width: 100%; /* Width will be 100% of parent container  */
     height: 100%; /* Height will be 100% of parent container  */
@@ -227,7 +227,7 @@ a {/*Hyperlinks manipulation   */
     width: 100%; /* Width will be 100% of parent container  */
     height: 100%; /* Height will be 100% of parent container  */
     backface-visibility: hidden; /* hiding backface will eliminate flicker bugs   */
-    background: url("../images/Dzsingi.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background: url("../images/dzsingi.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
     display: flex; /* Will allow to use flexbox for below alignments   */
     background-size: contain; /* will contain element if a resize is necessary without overlapping on bottom card text  */
     align-items: flex-end; /* using flex puts text on the bottom  */
@@ -253,7 +253,7 @@ a {/*Hyperlinks manipulation   */
     justify-content: space-around; /* justify elements   */
     border-radius: 3%; /* curve corners for better styling  */
     display: flex; /* Will allow to use flexbox for below alignments   */
-    background-image: url("../images/Old_paper7.jpg"); /* Back of card image  */
+    background-image: url("../images/old_paper7.jpg"); /* Back of card image  */
 
 }
 .CardBack p { /* formats paragraphs   */

@@ -276,7 +276,7 @@ a {/*Hyperlinks manipulation   */
     justify-content: space-around; /* justify elements   */
     border-radius: 3%; /* curve corners for better styling  */
     display: flex; /* Will allow to use flexbox for below alignments   */
-    background-image: url("../images/Old_paper7.jpg"); /* Back of card image  */
+    background-image: url("../images/old_paper7.jpg"); /* Back of card image  */
 
 }
 .CardBack p { /* formats paragraphs   */
