@@ -1,5 +1,5 @@
 *
-/*   */
+    /*   */
 
 {
     padding: 0px;/*Removes default margins from HTML and sets corners*/
@@ -11,15 +11,14 @@
 
 
 body {/*   */
-
-    background-size: cover; /*sets the size of the background to cover the whole page.*/
-    background: url('../Images/toda_mongke_and_his__fzBtb.jpg') center;/* will allow for a responsive background to change
+    background-size: cover; /*sets the size of the background to cover the whole page no white borders*/
+    background: url('../images/_tumanba_khan__his_w_dVCf8.jpg') repeat center;/* will allow for a responsive background to change
        along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
 }
 
 a {/*Hyperlinks manipulation   */
     color: whitesmoke; /* Color change  */
-    text-decoration: none; /* Removes hyperlink underlining, bullets ext.  */
+    text-decoration: none;
 }
 
 
@@ -43,7 +42,7 @@ a {/*Hyperlinks manipulation   */
     padding: 0; /* sets the margin and padding to 0 for a tight menu  */
     lis-style:none; /* Clears the bullets from the hyperlinks  */
     overflow: hidden; /* Hides anything going out of bounds  */
-    background-image:url("../Images/genghis_khan___jebe.jpg") ; /* Color for the UL  */
+    background-image:url("../images/genghis_khan___jebe.jpg") ; /* Color for the UL  */
     background-size: cover; /* stretches the image to cover the container*/
     border-radius: 10px; /* Curves drop down menu */
 }
@@ -62,7 +61,6 @@ a {/*Hyperlinks manipulation   */
     background-color:lightblue;/* color when hovering over   */
     border-radius: 10px;  /*ads smooth edges to highlight*/
     text-decoration: none; /* Removes decoration  */
-    transition: background-color 0.5s; /* adds a transition animation   */
 }
 
 .NavigationBar .Name {
@@ -132,7 +130,7 @@ a {/*Hyperlinks manipulation   */
     display: none; /* removes the checkbox needed for hamburger   */
 }
 .NavigationBar .Button:checked ~ .menu { /* when the menu button is checked the ~ symbol will target all UL in the menu */
-    max-height: 600px; /* menu will expand with above transition max height to fit all 7 pages or more if needed  */
+    max-height: 550px; /* menu will expand with above transition max height to fit all 7 pages or more if needed  */
 }
 
 @media (min-width: 40em) { /* media query to size set to 40em mostly for mobile devices, the media query will run the statement in the curly brackets only if condition inside brackets is true min-width*/
@@ -160,76 +158,97 @@ a {/*Hyperlinks manipulation   */
 }
 
 
+
 /*----------------------------------------------------- Navigation Bar ----------------------------------------------   */
 
-/*--------------------------------------------------- Parchment Panels -----------------------------------------------   */
 
-.PaperPanel { /* Base control element, highly customisable no need to rewrite the same code over and over but can simply amend on each page  */
+/*----------------------------------------------------- Cloud Panels /  ----------------------------------------------   */
+
+.CloudPanel { /* Base control element, highly customisable no need to rewrite the same code over and over but can simply amend on each page    */
     position: relative; /* sets positioning for the elements  */
-    display: block; /* will display items as a whole block rather then flex  */
+    display: flex; /* will display items flexibly  */
     justify-content: center; /* centers the content  */
     align-items: center; /* centers the item  */
-    max-width: 600px;/* set max size  */
+    max-width: 100%;/* set max size  */
     max-height: 600px; /* set max size  */
 
 }
 
-
-.PaperPanel .Paper {/* offset element   */
+.CloudPanel .Cloud {/* offset element   */
     position: relative;/* sets positioning for the elements  */
-    padding: 15px; /* Padding between the 2 elements  */
-    filter: drop-shadow(40px 40px 40px black); /* Gives a small sense of 3D perspective  */
-    overflow: hidden; /* Hides overflow  */
-    border-radius: 20px;/* curved corners styling   */
-    background: url("../Images/old_paper2.jpg"); /* paper texture   */
-    background-size: auto; /* size is auto   */
-
+    padding: 50px;
+    filter: drop-shadow(100px 100px 100px black);  /* Gives a small sense of 3D perspective  */
+    overflow: hidden;
+    border-radius: 20px;
 
 }
-
-.PaperPanel .Paper p {  /* text element  */
+.CloudPanel .Cloud h1 {  /* paragraph element  */
     position: relative;/* sets positioning for the elements  */
-    margin: 0px; /* 0 margins on text   */
-    padding: 0px;/* 0 padding on text   */
-    font-size: 2em; /* 1.5 relative to the font size of the element  */
+    font-size: 3em; /* font size in em  */
+    overflow: hidden; /* hide overflow */
+    color: black; /* font colour  */
+    font-weight: bold; /* font bold  */
+    font-style: italic;
+    font-family: SansSerif;
+
+}
+.CloudPanel .Cloud p {  /* paragraph element  */
+    position: relative;/* sets positioning for the elements  */
+    margin: 0px; /* margin inside element that is handled above in the upper element */
+    padding: 0px;/* adding inside element hat is handled above in the upper element */
+    font-size: 1.8em; /* font size in em  */
+    overflow: hidden; /* hide overflow */
+    color: black; /* font colour  */
+    font-weight: bold; /* font bold  */
     line-height: 1.5; /* sets space between lines for better readability  */
-    overflow: hidden;/* Hides overflow  */
-    color: black;/* text color  */
-    font-family: "Times New Roman"; /* font used  */
-    font-style: italic; /* text style  */
 
+}
+.CloudPanel .Cloud p a {  /* paragraph element  */
+    color: blue;
+}
+
+.CloudPanel .Cloud:before { /* before pseudo element */
+    content: ''; /* insert content property used in pseudo element  */
+    position: absolute;/* sets positioning for the elements  */
+    top: -30px; /* offset by 30 px */
+    left: -30px; /* offset by 30 px */
+    right: -30px; /* offset by 30 px */
+    bottom: -30px; /* offset by 30 px */
+    filter: blur(0px); /* blur filter still unsure of which value works best */
+    background: url("../images/light_1282314_1280.jpg"); /* Fixed property creates a nice movement effect for the clouds as the user is scrolling  */
+    background-size: cover; /* stretch teh background */
+    opacity: 0.80; /* set opacity */
+    border: solid 2px red; /* mostly for testing */
 }
 
 
-/*----------------------------------------------------- Parchment Panels ----------------------------------------------   */
-
+/*----------------------------------------------------- Cloud Panels  ----------------------------------------------   */
 
 /*----------------------------------------------------- Cards  ----------------------------------------------   */
 /*   */
+
 .Card {/* Main containing element for cards  */
     position: relative; /* position will be relative to its normal position   */
-    min-height: 560px; /* Minimal height  */
-    min-width:450px; /* Minimal weight allowed  */
+    min-height: 500px; /* Minimal height  */
+    min-width:350px; /* Minimal weight allowed  */
     border-radius: 3%; /* curve corners for better styling  */
-    padding-bottom: 10%; /* will set space for text below   */
 }
 .CardBody { /* Holds the front and back elements */
-    background-image: url("../Images/Old_paper7.jpg");
     position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
     width: 100%; /* Width will be 100% of parent container  */
     height: 100%; /* Height will be 100% of parent container  */
     transform-style: preserve-3d;/* will let the element preserve the transformation  */
     transition:all 1s ease; /* will determine the time it will take to flip card  */
     border-radius: 3%; /* curve corners for better styling  */
+
 }
 .CardFront {
     position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
     width: 100%; /* Width will be 100% of parent container  */
     height: 100%; /* Height will be 100% of parent container  */
     backface-visibility: hidden; /* hiding backface will eliminate flicker bugs   */
-    background: url("../Images/Dzsingi.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
     display: flex; /* Will allow to use flexbox for below alignments   */
-    background-size: contain; /* will contain element if a resize is necessary without overlapping on bottom card text  */
+    background-size: cover; /* will contain element if a resize is necessary without overlapping on bottom card text  */
     align-items: flex-end; /* using flex puts text on the bottom  */
     justify-content: center; /* using flex centers text on the bottom  */
     border-radius: 3%; /* curve corners for better styling  */
@@ -238,10 +257,13 @@ a {/*Hyperlinks manipulation   */
 .CardFront p{
     font-style: italic; /* Sets font to italic  */
     font-family: "Times New Roman"; /* Choose font  */
-    font-size: 1.5em; /* Size of text in em  */
+    font-size: 2em; /* Size of text in em  */
     padding: 3%; /* Adds padding */
     color: black; /* Front font color   */
     text-transform: uppercase;/* Styling to bring attention  */
+}
+.CardBack p a{
+    color: blue;
 }
 .CardBack {
     position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
@@ -253,25 +275,25 @@ a {/*Hyperlinks manipulation   */
     justify-content: space-around; /* justify elements   */
     border-radius: 3%; /* curve corners for better styling  */
     display: flex; /* Will allow to use flexbox for below alignments   */
-    background-image: url("../Images/Old_paper7.jpg"); /* Back of card image  */
+    background-image: url("../images/Old_paper7.jpg"); /* Back of card image  */
 
 }
 .CardBack p { /* formats paragraphs   */
     padding: 10%; /* padding around text  */
     font-style: italic; /* font style   */
     font-family: "Times New Roman"; /* font type  */
-    font-size: 1.7em; /* font size in em   */
+    font-size: 2.0em; /* font size in em   */
     color: black; /* font color   */
     line-height: 1.5; /* sets space between lines for better readability  */
 }
 .CardBody:hover{ /* rotates body on hoover  */
-    transform: rotateY(180deg);/* rotate the card horizontally along the Y axis 180 degrees  */
-
+    transform:rotateY(180deg);/* rotate the card horizontally along the Y axis 180 degrees  */
 }
 
 
-
 /*----------------------------------------------------- Cards  ----------------------------------------------   */
+
+
 
 /*----------------------------------------------------- Button  ----------------------------------------------   */
 
@@ -290,8 +312,8 @@ a {/*Hyperlinks manipulation   */
     filter: drop-shadow(0 5px 5px black); /* Shadow for effect  */
     transition: background-color 0.8s; /* adds a transition animation   */
     margin: 20px; /* margin outside buttons inside banner  */
-    height: 25px; /* size height purely added to keep buttons the same size and shape if adding different text  */
-    width:100px; /* size wide purely added to keep buttons the same size and shape if adding different text  */
+    min-height: 25px; /* size height purely added to keep buttons the same size and shape if adding different text  */
+    min-width:100px; /* size wide purely added to keep buttons the same size and shape if adding different text  */
     text-transform: uppercase;
 }
 
@@ -308,60 +330,73 @@ a {/*Hyperlinks manipulation   */
 
 /*----------------------------------------------------- Button  ----------------------------------------------   */
 
-/*----------------------------------------------------- CSS Grid   ----------------------------------------------   */
+/*----------------------------------------------------- css Grid   ----------------------------------------------   */
 
-.Grid {
-    position: center;
+#Card1 {     /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront1{
+    background: url("../images/mongol_soldiers_by_r_HsJoA.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card2 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront2{
+    background: url("../images/babur_setting_out_wi_4mcws.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card3 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront3{
+    background: url("../images/tuluiwithqueensorgaq_PTIRf.jpg") no-repeat center; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card4 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront4{
+    background: url("../images/tangra_.jpg") no-repeat center; /* will avoid brick style repeat and braking */
+    background-size: cover;
+}
+
+
+.Grid1 { /* main wrapper for grid   */
+    padding-top: 200px;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-
-
-}
-
-.GridSub1 {
-    grid-column:1/1;
-    grid-row: 1/1;
-    justify-self: left;/* Centers element horizontally left*/
-    max-width: 180px;
-    max-height: 5612px;
-
-
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 1em;
+    grid-row-gap: 3em ;
 
 }
-.GridSub2 {
-    margin-top: 200px;
-    grid-column: 2/2;
-    grid-row: 1/1;
-    justify-self: center; /* Centers element horizontally in the center */
-    align-self: center; /* Centers element vertically in the center  */
-    overflow: hidden;
-    padding: 5%;
-    filter: drop-shadow(100px 100px 100px black); /*adds shadow to card*/
-}
 
-.GridSub3 {
-    padding: 5% 0%;
-    grid-column:2/2;
-    grid-row: 2/2;
+.GridSub1 {/* houses left side elements  */
     justify-self: center;
     align-self: center;
-    font-family: italic;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 100px;
+
+
 }
-.GridSub4 {
-    grid-column:3/3;
-    grid-row: 1/1;
-    justify-self: right; /* Centers element horizontally right*/
-    max-width: 180px;
-    max-height: 5612px;
+.GridSub2 {/* houses right side elements   */
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 50px;
+    border-radius: 2%;
+    /*background:url("../images/Old_paper2.jpg");*/
+    background-size: cover;
+    filter: drop-shadow(100px 100px 100px black);  /* Gives a small sense of 3D perspective  */
+    margin: 50px;
 }
-.p1{
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-}
-.p2{
-    font-weight: bold;
-    font-size: 4em;
-    font-style: italic;
-    text-align: center;
+
+.ButtonBanner {/* sets properties for this page specifically*/
+    font-size: 2em;
 }

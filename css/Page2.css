@@ -11,9 +11,10 @@
 
 
 body {/*   */
-    background-size: cover; /*sets the size of the background to cover the whole page no white borders*/
-    background: url('../Images/_tumanba_khan__his_w_dVCf8.jpg') repeat center;/* will allow for a responsive background to change
+    background-size: auto; /*sets the size of the background to cover the whole page no white borders*/
+    background: url('../images/magnae_tartariae__ma_GWUO1.jpg') no-repeat top;/* will allow for a responsive background to change
        along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
+
 }
 
 a {/*Hyperlinks manipulation   */
@@ -42,7 +43,7 @@ a {/*Hyperlinks manipulation   */
     padding: 0; /* sets the margin and padding to 0 for a tight menu  */
     lis-style:none; /* Clears the bullets from the hyperlinks  */
     overflow: hidden; /* Hides anything going out of bounds  */
-    background-image:url("../Images/genghis_khan___jebe.jpg") ; /* Color for the UL  */
+    background-image:url("../images/genghis_khan___jebe.jpg") ; /* Color for the UL  */
     background-size: cover; /* stretches the image to cover the container*/
     border-radius: 10px; /* Curves drop down menu */
 }
@@ -215,7 +216,7 @@ a {/*Hyperlinks manipulation   */
     right: -30px; /* offset by 30 px */
     bottom: -30px; /* offset by 30 px */
     filter: blur(0px); /* blur filter still unsure of which value works best */
-    background: url("../Images/light_1282314_1280.jpg"); /* Fixed property creates a nice movement effect for the clouds as the user is scrolling  */
+    background: url("../images/light_1282314_1280.jpg"); /* Fixed property creates a nice movement effect for the clouds as the user is scrolling  */
     background-size: cover; /* stretch teh background */
     opacity: 0.80; /* set opacity */
     border: solid 2px red; /* mostly for testing */
@@ -275,7 +276,7 @@ a {/*Hyperlinks manipulation   */
     justify-content: space-around; /* justify elements   */
     border-radius: 3%; /* curve corners for better styling  */
     display: flex; /* Will allow to use flexbox for below alignments   */
-    background-image: url("../Images/Old_paper7.jpg"); /* Back of card image  */
+    background-image: url("../images/Old_paper7.jpg"); /* Back of card image  */
 
 }
 .CardBack p { /* formats paragraphs   */
@@ -330,14 +331,14 @@ a {/*Hyperlinks manipulation   */
 
 /*----------------------------------------------------- Button  ----------------------------------------------   */
 
-/*----------------------------------------------------- CSS Grid   ----------------------------------------------   */
+/*----------------------------------------------------- css Grid   ----------------------------------------------   */
 
 #Card1 {     /* Individual control of cards with ID as different images have a different attributes  */
     min-height: 770px;
     min-width: 640px;
 }
 #CardFront1{
-    background: url("../Images/mongol_soldiers_by_r_HsJoA.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background: url("../images/kokocu.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
     background-size: cover;
 }
 #Card2 {    /* Individual control of cards with ID as different images have a different attributes  */
@@ -345,7 +346,7 @@ a {/*Hyperlinks manipulation   */
     min-width: 640px;
 }
 #CardFront2{
-    background: url("../Images/babur_setting_out_wi_4mcws.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background: url("../images/yesugei_the_father_o_38U5Q.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
     background-size: cover;
 }
 #Card3 {    /* Individual control of cards with ID as different images have a different attributes  */
@@ -353,7 +354,7 @@ a {/*Hyperlinks manipulation   */
     min-width: 640px;
 }
 #CardFront3{
-    background: url("../Images/tuluiwithqueensorgaq_PTIRf.jpg") no-repeat center; /* will avoid brick style repeat and braking of image  */
+    background: url("../images/belgutei_vs_buri_bok_bCJmo.jpg") no-repeat center; /* will avoid brick style repeat and braking of image  */
     background-size: cover;
 }
 #Card4 {    /* Individual control of cards with ID as different images have a different attributes  */
@@ -361,7 +362,7 @@ a {/*Hyperlinks manipulation   */
     min-width: 640px;
 }
 #CardFront4{
-    background: url("../Images/tangra_.jpg") no-repeat center; /* will avoid brick style repeat and braking */
+    background: url("../images/genghis_khan___jebe.jpg") no-repeat center; /* will avoid brick style repeat and braking */
     background-size: cover;
 }
 
@@ -391,7 +392,7 @@ a {/*Hyperlinks manipulation   */
     max-height: 100%;
     padding: 50px;
     border-radius: 2%;
-    /*background:url("../Images/Old_paper2.jpg");*/
+    /*background:url("../images/Old_paper2.jpg");*/
     background-size: cover;
     filter: drop-shadow(100px 100px 100px black);  /* Gives a small sense of 3D perspective  */
     margin: 50px;
